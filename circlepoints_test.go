@@ -25,3 +25,5 @@ func BenchmarkGeneratePointMax(b *testing.B) {
 		GeneratePointMax()
 	}
 }
+
+// TODO: Tests
