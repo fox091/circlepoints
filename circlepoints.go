@@ -59,7 +59,9 @@ func GeneratePointRejection() Point {
 	}
 }
 
-// TODO: Doc comment
+// GeneratePointSqrt generates a point by picking a random point in polar coordinates and converting it to cartesian coordinates.
+// It generates the polar coordinate point by using the square root of a random number as the radius length.
+// This leads to a correct random distribution in cartesian coordinates.
 func GeneratePointSqrt() Point {
 	radiusLength := math.Sqrt(rand.Float64())
 	radianAngle := rand.Float64() * (2 * math.Pi)
@@ -70,7 +72,9 @@ func GeneratePointSqrt() Point {
 	}
 }
 
-// TODO: Doc comment
+// GeneratePointTriangle generates a point by picking a random point in polar coordinates and converting it to cartesian coordinates.
+// It generates the polar coordinate point by selecting 2 random numbers added together for the radius length and reflecting that point back into the circle if it ends up outside the circle.
+// This leads to a correct random distribution in cartesian coordinates.
 func GeneratePointTriangle() Point {
 	radiusLength := rand.Float64() + rand.Float64()
 	if radiusLength > 1 {
@@ -84,7 +88,9 @@ func GeneratePointTriangle() Point {
 	}
 }
 
-// TODO: Doc comment
+// GeneratePointMax generates a point by picking a random point in polar coordinates and converting it to cartesian coordinates.
+// It generates the polar coordinate point by selecting 2 random numbers for the radius length and using the bigger of the 2.
+// This leads to a correct random distribution in cartesian coordinates.
 func GeneratePointMax() Point {
 	r, r2 := rand.Float64(), rand.Float64()
 	if r2 > r {
