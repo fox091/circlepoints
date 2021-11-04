@@ -49,7 +49,7 @@ func GeneratePointRejection() Point {
 	for {
 		x := (rand.Float64() * 2) - 1
 		y := (rand.Float64() * 2) - 1
-		if math.Hypot(x, y) > 1 {
+		if math.Sqrt(x*x+y*y) > 1 {
 			continue
 		}
 		return Point{
